@@ -15,6 +15,9 @@
 		4B0647551A4AFAC60099A548 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0647541A4AFAC60099A548 /* Images.xcassets */; };
 		4B0647581A4AFAC60099A548 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B0647561A4AFAC60099A548 /* LaunchScreen.xib */; };
 		4B0647641A4AFAC60099A548 /* PageViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0647631A4AFAC60099A548 /* PageViewControllerTests.m */; };
+		4B0647701A4AFCB00099A548 /* CAIPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B06476F1A4AFCB00099A548 /* CAIPageViewController.m */; };
+		4B0647761A4B06350099A548 /* CAICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0647751A4B06350099A548 /* CAICollectionViewCell.m */; };
+		4B0647791A4B164F0099A548 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0647781A4B164F0099A548 /* ColorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,12 @@
 		4B06475D1A4AFAC60099A548 /* PageViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0647621A4AFAC60099A548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B0647631A4AFAC60099A548 /* PageViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewControllerTests.m; sourceTree = "<group>"; };
+		4B06476E1A4AFCB00099A548 /* CAIPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIPageViewController.h; sourceTree = "<group>"; };
+		4B06476F1A4AFCB00099A548 /* CAIPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIPageViewController.m; sourceTree = "<group>"; };
+		4B0647741A4B06350099A548 /* CAICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAICollectionViewCell.h; sourceTree = "<group>"; };
+		4B0647751A4B06350099A548 /* CAICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAICollectionViewCell.m; sourceTree = "<group>"; };
+		4B0647771A4B164F0099A548 /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		4B0647781A4B164F0099A548 /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +74,7 @@
 		4B0647381A4AFAC60099A548 = {
 			isa = PBXGroup;
 			children = (
+				4B06476D1A4AFC8A0099A548 /* Page */,
 				4B0647431A4AFAC60099A548 /* PageViewController */,
 				4B0647601A4AFAC60099A548 /* PageViewControllerTests */,
 				4B0647421A4AFAC60099A548 /* Products */,
@@ -92,6 +102,8 @@
 				4B0647561A4AFAC60099A548 /* LaunchScreen.xib */,
 				4B06474B1A4AFAC60099A548 /* PageViewController.xcdatamodeld */,
 				4B0647441A4AFAC60099A548 /* Supporting Files */,
+				4B0647771A4B164F0099A548 /* ColorViewController.h */,
+				4B0647781A4B164F0099A548 /* ColorViewController.m */,
 			);
 			path = PageViewController;
 			sourceTree = "<group>";
@@ -120,6 +132,17 @@
 				4B0647621A4AFAC60099A548 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B06476D1A4AFC8A0099A548 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				4B06476E1A4AFCB00099A548 /* CAIPageViewController.h */,
+				4B06476F1A4AFCB00099A548 /* CAIPageViewController.m */,
+				4B0647741A4B06350099A548 /* CAICollectionViewCell.h */,
+				4B0647751A4B06350099A548 /* CAICollectionViewCell.m */,
+			);
+			name = Page;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,10 +245,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0647761A4B06350099A548 /* CAICollectionViewCell.m in Sources */,
 				4B06474D1A4AFAC60099A548 /* PageViewController.xcdatamodeld in Sources */,
 				4B06474A1A4AFAC60099A548 /* AppDelegate.m in Sources */,
+				4B0647701A4AFCB00099A548 /* CAIPageViewController.m in Sources */,
 				4B0647501A4AFAC60099A548 /* ViewController.m in Sources */,
 				4B0647471A4AFAC60099A548 /* main.m in Sources */,
+				4B0647791A4B164F0099A548 /* ColorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
