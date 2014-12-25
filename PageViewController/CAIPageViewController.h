@@ -22,6 +22,8 @@
 @interface CAIPageViewController : UIViewController
 
 @property (nonatomic, weak)id<CAIPageViewControllerDelegate> delegate;
+
+//自定义内容的大小 只能继承 在初始化方法中修改
 @property (nonatomic, assign)CGRect contentRect;
 
 //自动 调用 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;

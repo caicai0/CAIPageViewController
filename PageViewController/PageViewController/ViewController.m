@@ -23,6 +23,7 @@
     page.view.frame = self.view.bounds;
     page.delegate = self;
     [page registerClass:[ColorViewController class] forViewControllerWithReuseIdentifier:@"abc"];
+    page.contentRect = CGRectMake(0, 100, 50, 300);
     [self addChildViewController:page];
     // Do any additional setup after loading the view, typically from a nib.
 }

@@ -23,6 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.reuseIdentifierDictionary = [NSMutableDictionary dictionary];
+        self.contentRect = CGRectZero;
     }
     return self;
 }
@@ -30,12 +31,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if (CGRectEqualToRect(self.contentRect, CGRectZero)) {
+        self.contentRect = self.view.bounds;
+    }
+    
     self.flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    self.flowLayout.itemSize = self.view.bounds.size;
+    self.flowLayout.itemSize = self.contentRect.size;
     self.flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.flowLayout.minimumLineSpacing = 0;
     
-    self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:self.flowLayout];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:self.contentRect collectionViewLayout:self.flowLayout];
     [self.view addSubview:self.collectionView];
     
     self.collectionView.delegate = self;
@@ -49,14 +54,6 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark - public
-
-- (void)setContentRect:(CGRect)contentRect{
-    if (!CGRectEqualToRect(contentRect, _contentRect)) {
-        _contentRect = contentRect;
-        self.flowLayout.itemSize = _contentRect.size;
-        self.collectionView.frame = _contentRect;
-    }
-}
 
 - (void)registerClass:(Class)aClass forViewControllerWithReuseIdentifier:(NSString *)reuseIdentifier{
     [self.reuseIdentifierDictionary setObject:NSStringFromClass(aClass) forKey:reuseIdentifier];
@@ -83,8 +80,10 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"start%d",indexPath.item);
     UIViewController * controller = [self.delegate pageViewController:self viewControllerForItemAtIndexPath:indexPath.item];
     CAICollectionViewCell * cell = (CAICollectionViewCell *)controller.view.superview.superview;
+    NSLog(@"end");
     return cell;
 }
 
